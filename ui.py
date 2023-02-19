@@ -44,7 +44,7 @@ class App(ft.UserControl):
                     field_4.focus()
 
             field_1 = ft.TextField(
-                width=50,
+                width=75,
                 focused_border_color="0xff9ecaff",
                 cursor_color="0xff202429",
                 text_style=ft.TextStyle(
@@ -85,7 +85,7 @@ class App(ft.UserControl):
                     ),
                     ft.ElevatedButton(
                         text="Unlock",
-                        width=240,
+                        width=340,
                         on_click=self._on_unlock_click
                     )
                 ],
@@ -142,7 +142,7 @@ class App(ft.UserControl):
                         alignment=ft.MainAxisAlignment.SPACE_EVENLY,
                         horizontal_alignment=ft.CrossAxisAlignment.CENTER
                     ),
-                    width=250,
+                    width=350,
                     height=60,
                     border_radius=10,
                     border=ft.border.all(1, "black"),
@@ -218,10 +218,10 @@ class App(ft.UserControl):
                         label_style=ft.TextStyle(color="black"),
                         text_style=ft.TextStyle(color="black"),
                     ),
-                    ft.ProgressBar(width=240, value=0),
+                    ft.ProgressBar(width=340, value=0),
                     ft.ElevatedButton(
                         text="Search",
-                        width=240,
+                        width=340,
                         on_click=self._on_search_click
                     )
                 ],
@@ -274,7 +274,7 @@ class App(ft.UserControl):
                     ),
                     ft.ElevatedButton(
                         text="Save",
-                        width=240,
+                        width=340,
                         on_click=self._on_save_click
                     )
                 ],
@@ -333,7 +333,7 @@ class App(ft.UserControl):
                         self._search_page
                     ]
                 ),
-                width=270,
+                width=370,
                 height=480,
                 border_radius=4,
                 bgcolor="0xffc1c4ca",
@@ -376,7 +376,7 @@ class App(ft.UserControl):
         def build(self) -> ft.Container:
             return ft.Container(
                 content=self._screen,
-                width=290,
+                width=390,
                 height=560,
                 border_radius=20,
                 border=ft.border.all(1, "white"),
@@ -412,7 +412,7 @@ class App(ft.UserControl):
                 content=ft.Row(
                     controls=[
                         ft.Container(
-                            width=60
+                            width=110
                         ),
                         ft.IconButton(
                             icon=ft.icons.LIST,
@@ -435,12 +435,12 @@ class App(ft.UserControl):
                             icon_size=20
                         ),
                         ft.Container(
-                            width=60
+                            width=110
                         )
                     ],
                     alignment=ft.MainAxisAlignment.SPACE_EVENLY
                 ),
-                width=290,
+                width=390,
                 height=40,
                 border_radius=ft.border_radius.only(
                     bottomLeft=20,
@@ -577,7 +577,7 @@ class App(ft.UserControl):
                     self._lamp
                 ]
             ),
-            width=290,
+            width=390,
             height=560,
             border_radius=20
         )

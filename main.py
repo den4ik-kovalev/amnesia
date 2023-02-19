@@ -12,7 +12,7 @@ def main(page: ft.Page):
     page.padding = 10
     page.horizontal_alignment = "center"
     page.vertical_alignment = "center"
-    page.window_width = 360
+    page.window_width = 460
     page.window_height = 640
 
     app = ui.App(page=page)
