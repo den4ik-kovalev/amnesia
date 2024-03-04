@@ -1,10 +1,14 @@
-import flet
 import flet as ft
+from loguru import logger
 
 import ui
 from storage import storage
 
 
+logger.add("error.log", format="{time} {level} {message}", level="ERROR")
+
+
+@logger.catch
 def main(page: ft.Page):
     page.title = "Amnesia"
     page.theme_mode = "dark"
@@ -26,5 +30,5 @@ if __name__ == '__main__':
     settings = storage.get_settings()
     ft.app(
         target=main,
-        view=flet.WEB_BROWSER if settings.web_mode else flet.FLET_APP
+        view=ft.WEB_BROWSER if settings.web_mode else ft.FLET_APP
     )
